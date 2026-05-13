@@ -13,6 +13,7 @@ if os.path.exists(_env):
             os.environ.setdefault(_k.strip(), _v.strip())
 
 PHONE = os.environ.get("CV_PHONE", "")
+EMAIL = os.environ.get("CV_EMAIL", "")
 
 # ── Extract profile image from index.html ────────────────────────────────────
 index_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
@@ -176,7 +177,7 @@ HTML = f"""<!DOCTYPE html>
     <div class="sb-heading">Contact</div>
     <div class="sb-text">Greater Hamburg Area</div>
     <div class="sb-text">{PHONE}</div>
-    <div class="sb-text">linkedin@wurdel.org</div>
+    <div class="sb-text">{EMAIL}</div>
     <div class="sb-text">linkedin.com/in/maik-wurdel</div>
     <div class="sb-text">twitter: @MWurdel</div>
   </div>
