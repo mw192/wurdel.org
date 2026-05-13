@@ -3,6 +3,17 @@
 
 import os, re, base64
 
+# Load .env if present
+_env = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+if os.path.exists(_env):
+    for _line in open(_env):
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip())
+
+PHONE = os.environ.get("CV_PHONE", "")
+
 # ── Extract profile image from index.html ────────────────────────────────────
 index_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
 img_path = "/tmp/profile.jpeg"
@@ -164,7 +175,7 @@ HTML = f"""<!DOCTYPE html>
   <div class="sb-section">
     <div class="sb-heading">Contact</div>
     <div class="sb-text">Greater Hamburg Area</div>
-    <div class="sb-text">REDACTED</div>
+    <div class="sb-text">{PHONE}</div>
     <div class="sb-text">linkedin@wurdel.org</div>
     <div class="sb-text">linkedin.com/in/maik-wurdel</div>
     <div class="sb-text">twitter: @MWurdel</div>
