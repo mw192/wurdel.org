@@ -160,8 +160,6 @@ HTML = f"""<!DOCTYPE html>
 
 <td class="sidebar">
   <img class="sidebar-photo" src="{img_path}" alt="Dr. Maik Wurdel">
-  <div class="sidebar-name">Dr. Maik Wurdel</div>
-  <div class="sidebar-tagline">Technology Leader · Data Platform<br>Data as a Product · Digital Twin<br>Agentic Engineering</div>
 
   <div class="sb-section">
     <div class="sb-heading">Contact</div>
