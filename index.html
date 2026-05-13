@@ -162,10 +162,10 @@
   .edu-card .year { color: var(--muted); font-size: .8rem; margin-top: .25rem; }
 
   /* SPEAKING */
-  .speaking-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .75rem; }
+  .speaking-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .75rem; }
   .speaking-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     background: #fff;
     border-radius: 8px;
@@ -174,7 +174,9 @@
   }
   section:nth-child(even) .speaking-item { background: var(--light); }
   .speaking-year { font-size: 1.1rem; font-weight: 700; color: var(--accent); min-width: 42px; }
-  .speaking-event { font-size: .9rem; color: var(--text); }
+  .speaking-meta { display: flex; flex-direction: column; gap: .2rem; }
+  .speaking-event { font-size: .85rem; color: var(--muted); }
+  .speaking-title { font-size: .9rem; color: var(--text); font-weight: 500; }
 
   /* CONTACT */
   .contact-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; }
@@ -387,14 +389,16 @@
   <div class="container">
     <h2>Public Speaking</h2>
     <div class="speaking-list">
-      <div class="speaking-item"><span class="speaking-year">2025</span><span class="speaking-event">Snowflake World Tour</span></div>
-      <div class="speaking-item"><span class="speaking-year">2025</span><span class="speaking-event">DataFestival</span></div>
-      <div class="speaking-item"><span class="speaking-year">2024</span><span class="speaking-event">Hamburger IT-Strategietage</span></div>
-      <div class="speaking-item"><span class="speaking-year">2024</span><span class="speaking-event">AWS Summit Berlin</span></div>
-      <div class="speaking-item"><span class="speaking-year">2019</span><span class="speaking-event">Seacon</span></div>
-      <div class="speaking-item"><span class="speaking-year">2018</span><span class="speaking-event">Seacon</span></div>
-      <div class="speaking-item"><span class="speaking-year">2017</span><span class="speaking-event">Software Engineering Live</span></div>
-      <div class="speaking-item"><span class="speaking-year">2016</span><span class="speaking-event">Code Talks</span></div>
+      <div class="speaking-item"><span class="speaking-year">2025</span><span class="speaking-meta"><span class="speaking-event">Snowflake World Tour</span><span class="speaking-title">Snowflake as Key to Kühne + Nagel's Data Mesh</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2025</span><span class="speaking-meta"><span class="speaking-event">DataFestival</span><span class="speaking-title">Rethinking Data Accessibility: The Data Mesh Journey of Kühne+Nagel</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2024</span><span class="speaking-meta"><span class="speaking-event">AWS Summit Berlin</span><span class="speaking-title">Rethinking Data Accessibility: Data Mesh meets Enterprise Integration</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2024</span><span class="speaking-meta"><span class="speaking-event">Hamburger IT-Strategietage</span><span class="speaking-title">Rethinking Connectivity and Data Access at Kuehne+Nagel</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2023/24</span><span class="speaking-meta"><span class="speaking-event">TH Brandenburg</span><span class="speaking-title">Cloud-native IT: Gastvorlesungen an der TH Brandenburg</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2019</span><span class="speaking-meta"><span class="speaking-event">OG Dev Conference</span><span class="speaking-title">Otto Group Tech Strategy (Keynote with Knut Talman)</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2019</span><span class="speaking-meta"><span class="speaking-event">Seacon</span><span class="speaking-title">Privacy by Design im Projekt FX – DSGVO und nun?</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2018</span><span class="speaking-meta"><span class="speaking-event">Seacon</span><span class="speaking-title">Eleven Lessons Learned aus einem agilen Großprojekt bei EOS</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2017</span><span class="speaking-meta"><span class="speaking-event">Software Engineering Live</span><span class="speaking-title">Architektur und Visualisierung: Ablösung oder Weiterentwicklung eines Legacy-Systems?</span></span></div>
+      <div class="speaking-item"><span class="speaking-year">2016</span><span class="speaking-meta"><span class="speaking-event">Code Talks</span><span class="speaking-title">Architekturvisualisierung mit D3</span></span></div>
     </div>
   </div>
 </section>
