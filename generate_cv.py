@@ -361,7 +361,7 @@ HTML = f"""<!DOCTYPE html>
 </html>
 """
 
-output = os.path.expanduser("~/Downloads/CV_Dr_Maik_Wurdel.pdf")
+output = os.path.join(os.path.dirname(os.path.abspath(__file__)), "CV_Dr_Maik_Wurdel.pdf")
 
 with open("/tmp/cv_maik_wurdel.html", "w", encoding="utf-8") as f:
     f.write(HTML)
